@@ -9,7 +9,7 @@ const getVariablesBuffer = function(sassVariables, file) {
   let str = '';
   
   for(let variable in sassVariables) {
-    str += variable + ': ' + JSON.stringify(sassVariables[variable]) + ';\n';
+    str += variable + ': ' + sassVariables[variable] + ';\n';
   }
 
   return new Buffer(str, file);
